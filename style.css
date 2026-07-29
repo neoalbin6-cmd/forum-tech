@@ -1,0 +1,577 @@
+/*==================================================
+  RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Calibri,Segoe UI,Arial,sans-serif;
+
+    color:#062b66;
+
+    background:#5f8fc9;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+/*==================================================
+  ROOT COLORS
+==================================================*/
+
+:root{
+
+    --primary-blue:#5f8fc9;
+
+    --navy:#082f72;
+
+    --gold:#c89b3c;
+
+    --gold-light:#f2d48b;
+
+    --silver:#d9dde2;
+
+    --white:#ffffff;
+
+    --coffee:#faf7f2;
+
+    --shadow-dark:rgba(0,0,0,.28);
+
+    --shadow-light:rgba(255,255,255,.75);
+
+}
+
+
+/*==================================================
+ PAGE
+==================================================*/
+
+.page-wrapper{
+
+    width:100%;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+
+
+/*==================================================
+ BACKGROUND
+==================================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,#8fb4df 0%,transparent 55%),
+
+    linear-gradient(180deg,#7aa4d6,#5f8fc9);
+
+    z-index:-3;
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    opacity:.08;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.25) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.25) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    z-index:-2;
+
+}
+
+
+
+
+/*==================================================
+ NAVIGATION
+==================================================*/
+
+.navigation-bar{
+
+    position:fixed;
+
+    top:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(1200px,92%);
+
+    z-index:1000;
+
+}
+
+
+
+.navigation-menu{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    gap:18px;
+
+}
+
+
+
+/*==================================================
+ NAVIGATION BUTTONS
+==================================================*/
+
+.navigation-link{
+
+    text-decoration:none;
+
+    color:var(--navy);
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    padding:13px 34px;
+
+    border-radius:60px;
+
+    background:
+
+    linear-gradient(
+
+    to bottom,
+
+    #ffffff,
+
+    #ececec);
+
+    border:2px solid rgba(255,255,255,.85);
+
+    box-shadow:
+
+    inset 0 2px 6px rgba(255,255,255,.95),
+
+    inset 0 -4px 8px rgba(0,0,0,.08),
+
+    0 12px 24px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.navigation-link:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+    box-shadow:
+
+    0 20px 30px rgba(0,0,0,.22),
+
+    0 0 25px rgba(200,155,60,.45);
+
+}
+
+
+
+/* shiny strip */
+
+.navigation-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.9),
+
+    transparent);
+
+}
+
+
+
+
+
+/*==================================================
+ HERO
+==================================================*/
+
+.hero-banner{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding-top:140px;
+
+    padding-bottom:60px;
+
+}
+
+
+
+/*==================================================
+ 3D ROOM
+==================================================*/
+
+.hero-room{
+
+    width:min(1180px,92%);
+
+    height:420px;
+
+    position:relative;
+
+    perspective:1200px;
+
+    border-radius:18px;
+
+}
+
+
+
+/* back wall */
+
+.hero-room::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #ffffff,
+
+    #ececec);
+
+    border-radius:14px;
+
+    box-shadow:
+
+    inset 0 0 30px rgba(255,255,255,.9),
+
+    inset 0 -10px 25px rgba(0,0,0,.08),
+
+    0 25px 40px rgba(0,0,0,.22);
+
+}
+
+
+
+/* ceiling */
+
+.hero-room::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:6%;
+
+    right:6%;
+
+    top:-22px;
+
+    height:55px;
+
+    background:
+
+    linear-gradient(
+
+    to bottom,
+
+    #ffffff,
+
+    #dddddd);
+
+    transform:
+
+    rotateX(72deg);
+
+    transform-origin:bottom;
+
+    border-radius:8px;
+
+}
+
+
+
+/*==================================================
+ CONTENT
+==================================================*/
+
+.hero-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+
+/*==================================================
+ COMPANY TITLE
+==================================================*/
+
+.company-title{
+
+    font-size:72px;
+
+    color:var(--navy);
+
+    letter-spacing:5px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    text-shadow:
+
+    1px 1px 0 white,
+
+    2px 2px 0 #d8d8d8,
+
+    3px 3px 10px rgba(0,0,0,.15);
+
+}
+
+
+
+/*==================================================
+ DIVIDER
+==================================================*/
+
+.title-divider{
+
+    width:320px;
+
+    height:6px;
+
+    margin:35px auto;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    #9b6a23,
+
+    #e6c26b,
+
+    white,
+
+    #e6c26b,
+
+    #9b6a23);
+
+    box-shadow:
+
+    0 0 18px rgba(200,155,60,.55);
+
+}
+
+
+
+/*==================================================
+ TAGLINE
+==================================================*/
+
+.company-tagline{
+
+    color:var(--navy);
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:6px;
+
+    text-shadow:
+
+    1px 1px 1px white;
+
+}
+
+
+
+/*==================================================
+ RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+.company-title{
+
+font-size:52px;
+
+}
+
+.hero-room{
+
+height:360px;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.navigation-menu{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+}
+
+.navigation-link{
+
+padding:10px 20px;
+
+font-size:15px;
+
+}
+
+.company-title{
+
+font-size:38px;
+
+letter-spacing:2px;
+
+}
+
+.title-divider{
+
+width:180px;
+
+}
+
+.company-tagline{
+
+font-size:18px;
+
+letter-spacing:3px;
+
+}
+
+.hero-room{
+
+height:300px;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.company-title{
+
+font-size:30px;
+
+}
+
+.company-tagline{
+
+font-size:15px;
+
+}
+
+.hero-room{
+
+height:260px;
+
+}
+
+}
