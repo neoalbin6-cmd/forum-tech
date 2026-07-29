@@ -1,0 +1,582 @@
+/*==================================================
+    GLOBAL TRANSITIONS
+==================================================*/
+
+*{
+    transition:
+    background .35s ease,
+    color .35s ease,
+    box-shadow .35s ease,
+    transform .35s ease;
+}
+
+
+
+/*==================================================
+    BODY BACKGROUND MOVEMENT
+==================================================*/
+
+body{
+
+    animation:backgroundShift 20s linear infinite;
+
+}
+
+@keyframes backgroundShift{
+
+0%{
+
+background-position:0 0;
+
+}
+
+100%{
+
+background-position:600px 0;
+
+}
+
+}
+
+
+
+/*==================================================
+    GOLD WAVE
+==================================================*/
+
+body::before{
+
+    animation:goldWave 18s linear infinite;
+
+}
+
+@keyframes goldWave{
+
+0%{
+
+transform:translateX(-5%) scale(1);
+
+}
+
+50%{
+
+transform:translateX(5%) scale(1.05);
+
+}
+
+100%{
+
+transform:translateX(-5%) scale(1);
+
+}
+
+}
+
+
+
+/*==================================================
+    SILVER GRID
+==================================================*/
+
+body::after{
+
+    animation:gridMove 35s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+0%{
+
+background-position:0 0;
+
+}
+
+100%{
+
+background-position:150px 150px;
+
+}
+
+}
+
+
+
+/*==================================================
+    NAVIGATION SHINE
+==================================================*/
+
+.navigation-link::before{
+
+animation:buttonShine 5s linear infinite;
+
+}
+
+@keyframes buttonShine{
+
+0%{
+
+left:-150%;
+
+}
+
+100%{
+
+left:180%;
+
+}
+
+}
+
+
+
+/*==================================================
+    NAVIGATION HOVER
+==================================================*/
+
+.navigation-link:hover{
+
+animation:buttonFloat .8s ease infinite alternate;
+
+}
+
+@keyframes buttonFloat{
+
+from{
+
+transform:translateY(-4px);
+
+}
+
+to{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+
+
+/*==================================================
+    HERO ROOM
+==================================================*/
+
+.hero-room{
+
+animation:heroEntrance 1.5s ease;
+
+}
+
+@keyframes heroEntrance{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px) scale(.94);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+
+
+/*==================================================
+    TITLE
+==================================================*/
+
+.company-title{
+
+animation:titleRise 1.5s ease;
+
+}
+
+@keyframes titleRise{
+
+0%{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+
+
+/*==================================================
+    DIVIDER
+==================================================*/
+
+.title-divider{
+
+animation:dividerGrow 2s ease;
+
+}
+
+@keyframes dividerGrow{
+
+0%{
+
+width:0;
+
+opacity:0;
+
+}
+
+100%{
+
+width:320px;
+
+opacity:1;
+
+}
+
+}
+
+
+
+/*==================================================
+    TAGLINE
+==================================================*/
+
+.company-tagline{
+
+animation:taglineFade 2.2s ease;
+
+}
+
+@keyframes taglineFade{
+
+0%{
+
+opacity:0;
+
+letter-spacing:20px;
+
+}
+
+100%{
+
+opacity:1;
+
+letter-spacing:6px;
+
+}
+
+}
+
+
+
+/*==================================================
+    INTRODUCTION PLATE
+==================================================*/
+
+.introduction-plate{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.introduction-plate::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:45%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.8),
+
+transparent);
+
+animation:plateShine 6s linear infinite;
+
+}
+
+@keyframes plateShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:160%;
+
+}
+
+}
+
+
+
+/*==================================================
+    SECTION CARDS
+==================================================*/
+
+.section-card{
+
+animation:cardFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes cardFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/*==================================================
+    CARD SHINE
+==================================================*/
+
+.section-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-150%;
+
+width:40%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.7),
+
+transparent);
+
+animation:cardShine 9s linear infinite;
+
+}
+
+@keyframes cardShine{
+
+0%{
+
+left:-150%;
+
+}
+
+100%{
+
+left:180%;
+
+}
+
+}
+
+
+
+/*==================================================
+    CONTACT CARDS
+==================================================*/
+
+.address-card,
+.contact-card{
+
+animation:contactFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes contactFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/*==================================================
+    FOOTER
+==================================================*/
+
+.closing-panel{
+
+animation:footerGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes footerGlow{
+
+0%{
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.20);
+
+}
+
+50%{
+
+box-shadow:
+
+0 15px 35px rgba(200,155,60,.45);
+
+}
+
+100%{
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.20);
+
+}
+
+}
+
+
+
+/*==================================================
+    FOOTER TITLE
+==================================================*/
+
+.closing-title{
+
+animation:titleGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes titleGlow{
+
+0%{
+
+text-shadow:
+
+0 0 5px white;
+
+}
+
+50%{
+
+text-shadow:
+
+0 0 25px gold;
+
+}
+
+100%{
+
+text-shadow:
+
+0 0 5px white;
+
+}
+
+}
+
+
+
+/*==================================================
+    LINKS
+==================================================*/
+
+a:hover{
+
+filter:brightness(115%);
+
+}
+
+
+
+/*==================================================
+    SCROLL REVEAL
+==================================================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:none;
+
+}
