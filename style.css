@@ -123,34 +123,28 @@ body::after{
 
 .navigation-bar{
 
-    position:fixed;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:72px;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
 
-    top:0;
+background:#d97a10;
 
-    left:0;
+border-top:2px solid #f3c98d;
+border-bottom:2px solid #8d4700;
 
-    width:100%;
+box-shadow:
 
-    height:72px;
+inset 0 2px 0 rgba(255,255,255,.35),
 
-    display:flex;
+inset 0 -2px 0 rgba(0,0,0,.22),
 
-    align-items:center;
-
-    justify-content:center;
-
-    z-index:9999;
-
-    background:linear-gradient(
-    to bottom,
-    #8b4d08,
-    #c97d1b,
-    #f2b04a,
-    #c97d1b,
-    #8b4d08);
-
-    box-shadow:
-    0 4px 18px rgba(0,0,0,.35);
+0 3px 10px rgba(0,0,0,.22);
 
 }
 
@@ -204,13 +198,17 @@ box-shadow:
 
 .navigation-link:hover{
 
-background:#fff7df;
+background:#082f72;
 
-color:#b36b00;
+color:white;
 
-border-color:#ffd36a;
+border-color:#082f72;
 
 transform:translateY(-2px);
+
+box-shadow:
+
+0 8px 18px rgba(8,47,114,.35);
 
 }
 
@@ -218,34 +216,33 @@ transform:translateY(-2px);
 
 /* shiny strip */
 
-.navigation-link::before{
+.navigation-link{
 
-    content:"";
+text-decoration:none;
 
-    position:absolute;
+padding:10px 34px;
 
-    top:0;
+background:white;
 
-    left:-140%;
+color:#082f72;
 
-    width:60%;
+font-size:16px;
 
-    height:100%;
+font-weight:700;
 
-    background:
+border-radius:999px;
 
-    linear-gradient(
+border:2px solid white;
 
-    120deg,
+letter-spacing:1px;
 
-    transparent,
+box-shadow:
 
-    rgba(255,255,255,.9),
+0 3px 8px rgba(0,0,0,.18),
 
-    transparent);
+inset 0 1px 0 rgba(255,255,255,.7);
 
 }
-
 
 
 
@@ -942,6 +939,7 @@ z-index:9999;
 
 }
 
+
 .closing-panel{
 
 height:72px;
@@ -952,32 +950,35 @@ justify-content:center;
 
 align-items:center;
 
-background:linear-gradient(
-to bottom,
-#8b4d08,
-#c97d1b,
-#f2b04a,
-#c97d1b,
-#8b4d08);
+background:#d97a10;
+
+border-top:2px solid #f3c98d;
 
 box-shadow:
-0 -4px 18px rgba(0,0,0,.35);
+
+inset 0 2px 0 rgba(255,255,255,.35),
+
+inset 0 -2px 0 rgba(0,0,0,.22),
+
+0 -3px 10px rgba(0,0,0,.25);
 
 }
 
 .closing-title{
 
-font-size:22px;
+font-size:30px;
 
-font-weight:900;
+font-weight:800;
 
-letter-spacing:4px;
+letter-spacing:5px;
 
 color:white;
 
+font-family:Calibri, Arial, sans-serif;
+
 text-shadow:
 
-0 2px 4px rgba(0,0,0,.35);
+0 1px 2px rgba(0,0,0,.30);
 
 }
 
